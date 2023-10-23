@@ -28,7 +28,7 @@ class ModelController {
     }
     @PatchMapping
     fun updateName (@RequestBody modelo:Products):ResponseEntity<Products>{
-        return ResponseEntity(ProductsService.update(modelo), HttpStatus.OK)
+        return ResponseEntity(ProductsService.updateName(modelo), HttpStatus.OK)
     }
     @GetMapping("/{id}")
     fun listById (@PathVariable("id") id: Long): ResponseEntity<*>{
